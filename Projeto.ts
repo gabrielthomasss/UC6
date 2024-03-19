@@ -115,6 +115,7 @@ class Projeto {
         public tecnologias: string,
         public data_inicio: Date,
         public data_fim: Date,
+        public cadastro: string,
         public status: string) {
     }
     mostrarDados() {
@@ -124,23 +125,56 @@ class Projeto {
         console.log(`Tecnologias: ${this.tecnologias}`)
         console.log(`Data_Inicio: ${this.data_inicio}`)
         console.log(`Data_Fim: ${this.data_fim}`)
+        console.log(`Cadastro: ${this.cadastro}`)
         console.log(`Status: ${this.status}`)
     }
 
 }
 
-const projeto1 = new Projeto(
+ const projeto1 = new Projeto(
     'Tecnology',
     'Progresso',
     'Ferramentas Modernas',
     new Date('2023-02-16'),
     new Date('2025-02-19'),
+    'Novos Projetos',
     'Em Andamento')
+ const projeto2 = new Projeto(
+    'Tech',
+     'Projeto Grande',
+    'Ferramentas Futuristas',
+     new Date('2022-01-16'),
+     new Date('2024-02-16'),
+     'Próximo Projeto',
+     'Em Andamento')
+  const projeto3 = new Projeto(
+        'TecnoRio',
+        'Projeto Inovador',
+        'Ferramentas de Ponta',
+        new Date('2022-02-16'),
+        new Date('2024-02-19'),
+        'Projeto 3',
+        'Em Andamento')
+  const projeto4 = new Projeto(
+            'TecnoRN',
+            'Projeto do Ano',
+            'Ferramentas de Ponta',
+            new Date('2024-02-16'),
+            new Date('2027-02-19'),
+            'Projeto 4',
+            'Em Andamento')
+    
 
 console.log(projeto1.mostrarDados())
 console.log('=======================================================================')
+console.log(projeto2.mostrarDados())
+console.log('=======================================================================')
+console.log(projeto3.mostrarDados())
+console.log('=======================================================================')
+console.log(projeto4.mostrarDados())
+console.log('=======================================================================')
 
-class Tarefa {
+class Tarefa extends Projeto{
 
     constructor(
         public nome: string,
@@ -148,7 +182,12 @@ class Tarefa {
         public solicitacao: string,
         public data_inicio: Date,
         public data_fim: Date,
+        public descricao: string,
+        public cadastro: string,
+        public tecnologias: string,
+        public status: string,
         public responsavel: string) {
+            super(nome, descricao, tecnologias, data_inicio, data_fim, cadastro, status)
     }
     mostrarDados() {
         console.log('Dados de Tarefas:')
@@ -157,6 +196,9 @@ class Tarefa {
         console.log(`Solicitações: ${this.solicitacao}`)
         console.log(`Data_Inicio: ${this.data_inicio}`)
         console.log(`Data_Fim: ${this.data_fim}`)
+        console.log(`Descrição: ${this.descricao}`)
+        console.log(`Cadastro: ${this.cadastro}`)
+        console.log(`Tecnologias: ${this.tecnologias}`)
         console.log(`Desenvolvedor Responsável: ${this.responsavel}`)
     }
 
@@ -168,10 +210,41 @@ const tarefa1 = new Tarefa(
     'Gerente',
     new Date('2023-05-15'),
     new Date('2024-03-14'),
+    'Em Frente',
+    '5788688',
+    'As melhores',
+    'Quase Pronto',
     'DevFront')
+const tarefa2 = new Tarefa(
+        'Futurista',
+        '5',
+        'Empresa Cliente',
+        new Date('2022-03-18'),
+        new Date('2024-03-18'),
+        'Em diante',
+        '6853578',
+        'Modernas',
+        'Quase lá',
+        'DevBack')
+const tarefa3 = new Tarefa(
+        'Inovação',
+        '8',
+        'Empresa Terceira',
+         new Date('2022-05-19'),
+         new Date('2024-05-18'),
+         'Em Frente',
+         '5478986',
+         'As melhores',
+         'Quase Finalizado',
+        'DevFULL')
 
 console.log(tarefa1.mostrarDados())
 console.log('=======================================================================')
+console.log(tarefa2.mostrarDados())
+console.log('=======================================================================')
+console.log(tarefa3.mostrarDados())
+console.log('=======================================================================')
+
 
 class Equipe {
 
@@ -179,6 +252,8 @@ class Equipe {
         public id: string,
         public nome: string,
         public cargo: string,
+        public lider: string,
+        public membros: string,
         public data_admissao: Date) {
 
     }
@@ -187,6 +262,8 @@ class Equipe {
         console.log(`ID: ${this.id}`)
         console.log(`Nome: ${this.nome}`)
         console.log(`Cargo: ${this.cargo}`)
+        console.log(`Lider: ${this.lider}`)
+        console.log(`Membros: ${this.membros}`)
         console.log(`Data_Admissão: ${this.data_admissao}`)
     }
 
@@ -194,9 +271,20 @@ class Equipe {
 
 const equipe1 = new Equipe(
     '2574467',
-    'Projetistas',
+    'Criadores',
     'Desenvolvedores',
+    'Chefe',
+    'Pessoas Incluidas',
     new Date('2023-01-01'))
+const equipe2 = new Equipe(
+        '5895433',
+        'Projetistas',
+        'Chefe',
+        'Pessoas Incluidas',
+        'Gerência',
+        new Date('2022-01-06'))
 
 console.log(equipe1.mostrarDados())
+console.log('=======================================================================')
+console.log(equipe2.mostrarDados())
 console.log('=======================================================================')
