@@ -1,0 +1,99 @@
+     CODE TECH 
+
+                          19/03/2024 
+
+ 
+
+ 
+
+CLASSES: 
+
+Empresa 
+
+Funcionário 
+
+Projeto 
+
+Tarefa 
+
+Equipe 
+
+ 
+
+ 
+
+ 
+
+Sobre a escolha das classes. 
+
+Empresa: Essa classe foi uma escolha simples. Empresa a qual fez o pedido de criar um sistema para facilitar o gerenciamento e a continuidade das atividades feita pela empresa. Onde foi colocada como classe principal, e sendo o real motivo para um desenvolvimento de um sistema. Pois a sua existência nada seria funcional. 
+
+ 
+
+Os seus atributos têm a finalidade de enriquecer o nome da empresa em questão, tendo em jogo todas as informações que um usuário do sistema possa ter. 
+
+ 
+
+Funcionário: São as pessoas responsáveis por fazer alguma atividade dentro daquela empresa. Onde por sua vez cada um tem uma função incomum em determinadas áreas da empresa. Essa classe ela tem uma importância igual quanto a classe empresa. 
+
+Os atributos colocados são todas as informações de uma pessoa física. Pois todas as PJ são PF também, mas nem todas PF são PJ. 
+
+ 
+
+Projeto: Essa classe tem a finalidade de mostrar quais as “atividades” feitas por essa empresa, então ela não poderia deixar de acompanhar as demais classes explicitas nesse documento. 
+
+ 
+
+Os atributos por sua vez definem as informações que um projeto precisa ter, dando ênfase a certas informações. 
+
+ 
+
+ 
+
+Tarefa: Essa é uma classe que tem uma certa relação com a classe projeto, as tarefas são existentes a partir de um projeto solicitado. 
+
+Os atributos têm os dados de cada tarefa feita, onde fica um histórico com todos os registros feitos. 
+
+ 
+
+Equipe: Essa é uma classe onde é colocado em disposição todos os funcionários que são os desenvolvedores para a aplicação das tecnologias. 
+
+Os atributos por vez têm total informações de destacar qual função faz aquele membro da equipe. 
+
+ 
+
+ 
+
+Os métodos são todas aplicações em funcionamento através das classes e atributos redigidos no documento.  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+                                       O que é a empresa, e quais suas atividades? 
+
+ 
+
+Essa é uma empresa voltada para o mercado tecnológico, onde ela faz a facilitação para os projetos feitos pela equipe responsável pelos projetos, essa empresa ela tem um grande potencial nesse mercado.  
+
+ 
+
+Os projetos feitos pela empresa são de grande escala, projetos simples até os mais complexos, essa será a top 1. 
+
+ 
+
+                              AS MELHORES TECNOLOGIAS JÁ IMPLEMENTADAS. 
+
+ 
+
+Teria mais coisas para colocar? 
+
+Sim, teria mais coisas para inserir no projeto feito, mas foi o máximo que deu para implementar. Se possível adicione mais informações. 
