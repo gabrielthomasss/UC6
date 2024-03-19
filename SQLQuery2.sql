@@ -1,55 +1,95 @@
 use sistema_biblioteca;
 
---Questão 1
+--Questï¿½o 1
 select count(*) as total_livros
 from LIVRO_BIBLIOTECA
 where cnpj= '12345678000123';
---Questão 2
+--Questï¿½o 2
 select * from BIBLIOTECARIO order by nome;
 
---Questão 3
-select LIVRO
+--Questï¿½o 3
+select titulo, autor from LIVRO
+where numero_registro = 10;
 
---Questão 4
+--Questï¿½o 4
 select *
 from evento
 where tipo = 'workshop' and custo > 150.00;
 
---Questão 5 não
-select * from TECNOLOGIA;
+--Questï¿½o 5 
+select livro.titulo
+from livro
+join tecnologia on 
+livro.numero_registro = TECNOLOGIA.numero_registro
 
---Questão 6 sim
-select 
+--Questï¿½o 6 
+select nome from atendente;
 
+--Questï¿½o 7 
+select titulo, ano_publicacao
+from PERIODICO
+where ano_publicacao = '2023';
 
---Questão 7 sim
-select 
+--Questï¿½o 8
+select livro.titulo , autor
+from livro
+join SOCIOLOGIA on 
+livro.numero_registro = SOCIOLOGIA.numero_registro
 
---Questão 8
-select numero_registro from SOCIOLOGIA;
-from 
+--Questï¿½o 9
+select matricula, nome 
+from EDUCADOR
 
---11 não
-select *
+--Questï¿½o 10
+select PERIODICO.titulo
+from PERIODICO
+where titulo like 'c%';
+
+--Questï¿½o 11 
+select evento.data, evento.tipo
 from evento
 where tipo = 'PALESTRA' and data <'2022'
 
---12 não
+--Questï¿½o 12 
+select livro.titulo, livro.ano_publicacao
+from livro
+join CIENCIA on livro.numero_registro = CIENCIA.numero_registro
+and ano_publicacao >'2015';
 
---Questão 13
+--Questï¿½o 13
 select TECNICO_TI.nome
 from TECNICO_TI
 where nome like '%rodrigo%';
---Questão 14
-select * 
+
+--Questï¿½o 14
+select FUNCIONARIO.nome
 from FUNCIONARIO
-where cpf = 
---Questão 15
-select LIVRO
+join ASSISTENTE on FUNCIONARIO.matricula = assistente.matricula;
 
---Questão 16
+--Questï¿½o 15
+select livro.titulo
+from livro
+where titulo like '%programaï¿½ï¿½o%';
 
+--Questï¿½o 16
+select PERIODICO.titulo
+from PERIODICO
+where titulo like '%saï¿½de%';
 
---Questão 17
+--Questï¿½o 17
+select FUNCIONARIO.nome
+from FUNCIONARIO
+join gerente on FUNCIONARIO.matricula = gerente.matricula
+where gerente.nome like 'c%';
 
---18 não
+--Questï¿½o 18 
+select livro.titulo, livro.ano_publicacao
+from livro
+where ano_publicacao > '2010' and ano_publicacao < '2020';
+
+--Questï¿½o 19
+select FUNCIONARIO.nome
+from FUNCIONARIO
+join ESTAGIARIO
+on ESTAGIARIO.matricula = FUNCIONARIO.matricula
+where ESTAGIARIO.nome like '%lima%';
