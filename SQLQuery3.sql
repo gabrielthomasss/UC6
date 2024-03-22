@@ -1,8 +1,8 @@
 -- Criar o banco
-create database senac;
+/*create database senac;
 -- Usar banco de dados
 use senac;
--- Criando tabela Endereço
+-- Criando tabela Endereï¿½o
   create table ENDERECO(
     id_endereco char(7) primary key,
     rua varchar(20),
