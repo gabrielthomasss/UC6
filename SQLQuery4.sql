@@ -1,6 +1,7 @@
 -- Questão 1
 select * from LIVRO
-from SOCIOLOGIA
+join SOCIOLOGIA 
+on livro.numero_registro = SOCIOLOGIA.numero_registro
 
 -- Questão 2
 select FUNCIONARIO.nome from FUNCIONARIO
@@ -24,7 +25,14 @@ select *
 from EVENTO
 where tipo = 'workshop' and year(data) >'2020';
 
+
 -- Questão 6
+select usuario.nome, emp_data from  usuario
+join emprestimo on usuario.id_usuario = emprestimo.matricula
+where MONTH(emp_data) = 4 
+and year(emp_data) = '2024';
+
+
 create table USUARIO(
   id_usuario varchar(7)primary key,
   nome varchar(10),
@@ -123,8 +131,11 @@ where LIVRO.numero_registro = EMPRESTIMO.numero_registro
 ) > 5
 
 --Questão 15
-select nome.titulo
-
+select nome,titulo
+from emprestimo
+join LIVRO on LIVRO.numero_registro = emprestimo.numero_registro
+join usuario on emprestimo.matricula = usuario.id_usuario
+join TECNOLOGIA on LIVRO.numero_registro = TECNOLOGIA.numero_registro;
 
 
 -- Questão 16
@@ -135,9 +146,25 @@ on EVENTO.id_evento = PALESTRA.id_evento
 where year (data) ='2022'
 order by PALESTRA.id_evento
 
-
-
+-- Questão 17
+select PERIODICO.titulo 
+from PERIODICO 
+where PERIODICO.titulo like '%Saúde%';
 
 
 -- Questão 18
-select
+select ESTAGIARIO.nome from ESTAGIARIO
+where ESTAGIARIO.nome like 'L%';
+
+-- Questão 19
+select titulo, ano_publicacao
+from LIVRO
+join SOCIOLOGIA on SOCIOLOGIA.numero_registro = LIVRO.numero_registro
+where ano_publicacao >= 1990 and ano_publicacao < 2000;
+
+-- Questão 20
+select LIVRO.titulo, LIVRO.autor
+from LIVRO 
+join EMPRESTIMO on EMPRESTIMO.numero_registro = LIVRO.numero_registro
+where MONTH(emp_data) = 4 
+and YEAR(emp_data) = 2024;
